@@ -5,7 +5,7 @@ import PostBox from "components/posts/PostBox";
 import AuthContext from "context/AuthContext";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "firebaseApp";
-import { create } from "domain";
+
 export interface PostProps {
   id: string;
   email: string;
@@ -16,6 +16,7 @@ export interface PostProps {
   likes?: string[];
   likeCount?: number;
   comments?: any[];
+  hashTag: string[];
 }
 
 const HomePage = () => {
